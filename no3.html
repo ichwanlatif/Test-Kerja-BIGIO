@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 3</title>
+</head>
+<body>
+    <h4>3. Buatlah sebuah program yang menghasilkan output sebagai berikut!</h4>
+
+    <img src="assets/img/no3_image.PNG" alt="">
+    <br>
+    <p>Jawab: </p>
+    <p>Input your number: <input type="number" id="numberInput"> <button type="button" onclick="onClickButtonInsert()">Insert</button></p>
+    <p>Output: <b>Open Your Console</b></p>
+    <p id="output"></p>
+
+    <script>
+        function onClickButtonInsert(){
+            const numberInput = document.getElementById('numberInput').value;
+
+            let i;
+            for(i=1; i<= (numberInput*2)-1; i++){
+                if(i <= numberInput){
+                    writeNumber(i, numberInput);
+                }
+                else{
+                    writeNumber((numberInput*2) - i, numberInput)
+                }
+            }
+        }
+
+        function writeNumber(i, numberInput){
+            let j;
+            let arrNumber = [];
+            for(j=1; j<= numberInput; j++){
+                if(j<=i){
+                    arrNumber.push(j);
+                }
+                else{
+                    arrNumber.push(' ')
+                }
+            }
+            let arrNumberReverse = arrNumber.join("");
+            arrNumber.push(arrNumberReverse.slice(0, -1).split("").reverse().join(""));
+            console.log(arrNumber.join(''));
+        }
+    </script>
+</body>
+</html>
