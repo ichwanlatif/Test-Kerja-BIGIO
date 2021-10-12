@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>No 2</title>
+</head>
+<body>
+    <h4>2. Buatlah sebuah program untuk fungsi yang menghasilkan output seperti dibawah ini!</h4>
+
+    <img src="assets/img/no2_image.PNG" alt="">
+    <br>
+    <p>Jawab: </p>
+    <p>Input your number: <input type="number" id="numberInput"> <button type="button" onclick="onClickButtonInsert()">Insert</button></p>
+    <p>Output: <b>Open Your Console</b></p>
+    <p id="output"></p>
+
+    <script>
+        function onClickButtonInsert(){
+            const numberInput = document.getElementById('numberInput').value;
+            for(var row=0; row < (numberInput*2)-1; row++){
+                let arrStar = [];
+                if(row < numberInput){
+                    for(var space=0; space<row; space++){
+                        arrStar.push(' ');
+                    }
+
+                    for(var star=numberInput; star>row; star--){
+                        arrStar.push(' *');
+                    }
+                }
+                else{
+                    for(var space=numberInput; space>row-numberInput+1; space--){
+                        arrStar.push(' ');
+                    }
+
+                    for(var star=0; star<=row-numberInput+1; star++){
+                        arrStar.push('* ');
+                    }
+                }
+
+                console.log(arrStar.join(''));
+            }
+        }
+    </script>
+</body>
+</html>
