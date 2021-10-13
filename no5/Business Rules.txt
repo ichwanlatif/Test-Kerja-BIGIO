@@ -1,0 +1,4 @@
+- Guru hanya dapat memberikan nilai pada siswa yang diajar
+- Siswa diharuskan mengambil semester (create semester)
+- Siswa diharuskan mengambil pelajaran(course) pada setiap semester yang nantinya akan diberikan nilai pada guru
+- 1 Semester dapat mengambil banyak pelajaran
